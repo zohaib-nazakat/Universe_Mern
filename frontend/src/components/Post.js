@@ -10,6 +10,8 @@ import 'react-quill/dist/quill.snow.css'
 import ReactTimeAgo from 'react-time-ago'
 import axios from 'axios';
 import ReactHtmlParser from 'html-react-parser'
+import { useSelector } from 'react-redux';
+import { selectUser } from '../feature/userSlice';
 
 function LastSeen({ date }) {
   return (
@@ -24,6 +26,7 @@ function Post({post}) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [answer, setAnswer] = useState("")
   const Close = <CloseRounded />;
+  const user = useSelector(selectUser);
 
   const handleQuill = (value) => {
     setAnswer(value)
@@ -39,7 +42,8 @@ const handleSubmit = async() => {
     }
     const body = {
       answer: answer,
-      questionId: post?._id
+      questionId: post?._id,
+      user : user,
     }
     await axios.post('/api/answers', body,config).then((res) => {
       console.log(res.data)
@@ -53,13 +57,10 @@ const handleSubmit = async() => {
   return (
     <div className='post'>
       <div className='post__info'>
-        <Avatar />
+        <Avatar src={post?.user?.photo}/>
              
-        <h4>User Name</h4>
+        <h4>{post?.user?.userName}</h4>
       
-
-
-
        <small><LastSeen date={post?.createdAt}/></small>
       </div>
           <div className="post__body">
@@ -93,7 +94,7 @@ height: "auto",
 >
 <div className='modal__question'>
   <h1>{post?.questionName}</h1>
-  <p>asked by {" "}<span className='name'>Username </span>
+  <p>asked by {" "}<span className='name'>{post?.user?.userName}</span>
 on <span className='name'> {new Date(post?.createdAt).toLocaleString()}</span> </p></div>  
       <div className='modal__answer'>
         <ReactQuill value = {answer} onChange ={handleQuill} placeholder="enter your answer"/>
@@ -164,13 +165,13 @@ style={{
   color:"#888", 
 }}
  className="post__answered">
-<Avatar />
+<Avatar src = {_a?.user?.photo}/>
 <div
 style={{
   margin:"0px 10px",
 }}
  className="post__info">
-<p>Username</p>
+<p>{_a?.user?.userName}</p>
 <span><LastSeen date = {_a?.createdAt} /></span>
 </div>
 </div>

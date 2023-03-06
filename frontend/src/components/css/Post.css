@@ -9,6 +9,9 @@
     max-width: 700px;
     box-shadow: 0px 5px 8px -9px solid rgab(0, 0, 0, 0.5);
   }
+  .post{
+    margin-left: 230px;
+  }
   
   .post__info {
     display: flex;

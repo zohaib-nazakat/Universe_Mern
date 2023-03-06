@@ -1,0 +1,91 @@
+.carousel-item{
+    height: 80vh;
+    min-height: 300px;
+    /* background: no-repeat  center ; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.carousel-item::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    right: 0%;
+    left: 0%;
+    background: #000;
+    opacity: 0.3;
+}
+.carousel-caption{
+    bottom: 180px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.carousel-caption h5{
+    font-size: 55px;
+    font-weight: 600;
+    /* margin-bottom: 30px; */
+    font-family: 'Raleway',sans-serif;
+}
+span{
+    color: rgb(62, 62, 233);
+}
+.carousel-caption p{
+    font-size: 18px;
+    font-family: 'Raleway',sans-serif;
+    
+}
+.slider-btn .btn{
+    background-color: blue;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-family: 'Raleway',sans-serif;
+
+}
+.slider-btn .btn:hover{
+    border-color: yellowgreen;
+    padding: 10px 50px 10px 50px;
+    font-size: large;
+    font-weight: 500;
+    font-family: 'Raleway',sans-serif;
+
+}
+.slider-btn .btn a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+/* ``````````````````````````````` Read Section```````````````````` */
+/* .read{
+    display: flex;
+    margin-left: 570px;
+    margin-top: 40px;
+    font-size: 45px;
+} */
+.read_para{
+    margin-top: 30px;
+    color: #000;
+     font-family: 'Raleway',sans-serif;
+      font-size: 25px;
+       /* font-weight: 100; */
+        /* line-height: 72px; */
+         /* margin: 0 0 24px; */
+          /* text-align: center; */
+           /* text-transform: uppercase */
+}
+.read{
+    /* margin-left: 40px; 
+
+     margin-bottom: 40px; */
+     color: #000; font-family: 'Raleway',sans-serif; font-size: 62px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase
+}
+
+/* `````````````````````````````````` Faculty section ````````````````````````````` */
+.card-img-top{
+    width: 18rem;
+}
+.card img{
+    height: 400px;
+}

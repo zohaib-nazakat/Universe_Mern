@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 import HomeIcon from '@material-ui/icons/Home';
+import Zohaib from './Zohaib.js';
 
 // import ElevatorRoundedIcon from '@material-ui/icons/Eleva';
 
 import {
-  AccountBalance,
   CloseRounded,
   EmojiEvents,
   PeopleAltOutlined,
   QuestionAnswerOutlined,
   School,
-  Search,
 
 }  from '@material-ui/icons/';
 import { Avatar, Button, Input } from '@material-ui/core';
@@ -18,12 +17,18 @@ import "./css/UniverseHeader.css";
 import Modal from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 import axios from 'axios';
-
+import { signOut } from 'firebase/auth';
+import { auth } from '../firebase';
+import { logout, selectUser } from '../feature/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 function UniverseHeader() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [inputUrl, setInputUrl] = useState("")
   const [question, setQuestion] = useState("")
 const Close = <CloseRounded />;
+const dispatch = useDispatch();
+const user = useSelector(selectUser)
 
 const handleSubmit = async ()=> {
 if (question !==""){
@@ -34,7 +39,8 @@ if (question !==""){
   }
   const body = {
     questionName : question,
-    questionUrl : inputUrl
+    questionUrl : inputUrl,
+    user : user
   }
   await axios.post('/api/questions' , body, config).then((res)=> {
     console.log(res.data);
@@ -47,6 +53,19 @@ if (question !==""){
   })
 }
 }
+
+const handleLogout = () => {
+  if (window.confirm("Are you sure to logout ?")){
+    signOut(auth)
+    .then(() => {
+      dispatch(logout())
+      console.log("logged out");
+    })
+    .catch(() => {
+      console.log("error in logout")
+    })
+  }
+}
   return (
   <div className='qheader'>
     <div className='qHeader-content'>
@@ -57,19 +76,28 @@ alt="logo"/> */}
 </div>
         <div className="qHeader__icons">
         <h3 className='header__icon'>Universe</h3>
-          <div className="qHeader__icon"><HomeIcon /></div>
-          <div className="qHeader__icon"> <School/> </div>
-          <div className="qHeader__icon"><EmojiEvents/></div>
-          <div className="qHeader__icon"><AccountBalance/></div>
+         <Link to='/'> <div className="qHeader__icon"><HomeIcon /></div> </Link>
+         <Link to='/NoticeBoard'> <div className="qHeader__icon"> <School/> </div></Link>
+         <Link to='/LeaderBoard'> <div className="qHeader__icon"><EmojiEvents/></div> </Link>
+          {/* <div className="qHeader__icon"><AccountBalance/></div> */}
+          {/* <ul>
+          <select className='dropDown'>
+            <option>User3</option>
+            <option>User1</option>
+          </select>
+          </ul> */}
+           
+          <Zohaib/>
+
+          
         
         </div>
-     <div className="qHeader__input">
-<Search />
-<Input type="text" className='search' placeholder="Search questions" />
-</div>
+    
 <div className='qHeader__Rem'>
 {/* ``````` Add our own profile components  ````````````````` */}
-<Avatar />
+
+<span onClick={handleLogout}><Avatar src = {user?.photo}/></span>
+
 
 
 <Button className='add_question' onClick={() => setIsModalOpen(true)} > Add Question <QuestionAnswerOutlined/> </Button>
@@ -92,7 +120,7 @@ height: "auto",
 <h5>Share Link</h5>
 </div>
 <div className="modal__info">
-<Avatar className="avatar" />
+<Avatar src = {user?.photo} className="avatar" />
 <div className="modal__scope">
 <PeopleAltOutlined />
 <select>

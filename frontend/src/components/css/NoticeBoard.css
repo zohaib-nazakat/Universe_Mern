@@ -1,0 +1,88 @@
+
+.body {
+    background-color: grey;
+}
+
+.noticeboard_hero {
+    margin-top: 3%;
+}
+
+.notice_heading {
+    display: inline-flex;
+    justify-content: center;
+}
+
+/* `````````````````````````````````````````` */
+.cursor{
+    cursor: pointer;
+}
+
+h1 {
+    padding: 40px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.slide li a{
+    text-decoration: none;
+}
+
+
+
+
+
+/* ```````````````````` */
+.slide0 {
+    clear: both;
+    width: 100%;
+    overflow: hidden;
+    height: 0px;
+    transition: height .4s ease;
+    list-style: none;
+}
+#touch0 {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+}
+#touch0:checked+.slide0 {
+    height: 70px;
+}
+/* ``````````````````````````````````````````````````````````````` */
+
+#touch1 {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+}
+#touch1:checked+.slide0 {
+    height: 70px;
+}
+/* ```````````````````````````````````````````````````````````````````````` */
+#touch2 {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+}
+#touch2:checked+.slide0 {
+    height: 70px;
+}
+/* ```````````````````` */
+#touch3 {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+}
+#touch3:checked+.slide0 {
+    height: 70px;
+}
+/* ```````````````````` */
+#touch4 {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+}
+#touch4:checked+.slide0 {
+    height: 70px;
+}
+/* ```````````````````` */

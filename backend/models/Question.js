@@ -8,7 +8,8 @@ default: Date.now()
 },
 answers: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Answers"
-}
+    ref: "Answers",
+},
+user: Object,
 })
 module.exports = mongoose.model("Questions", QuestionSchema);
