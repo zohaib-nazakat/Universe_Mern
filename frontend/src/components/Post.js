@@ -7,28 +7,76 @@ import Modal from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'
-import img2 from '../images/img2.jpg';
+import ReactTimeAgo from 'react-time-ago'
+import axios from 'axios';
+import ReactHtmlParser from 'html-react-parser'
 
-function Post() {
+function LastSeen({ date }) {
+  return (
+    <div>
+    <ReactTimeAgo date={date} locale="en-US" timeStyle="round"/>
+    </div>
+  )
+}
+
+
+function Post({post}) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [answer, setAnswer] = useState("")
   const Close = <CloseRounded />;
+
+  const handleQuill = (value) => {
+    setAnswer(value)
+  }
+  // console.log(answer)
+
+const handleSubmit = async() => {
+  if(post?._id && answer !==  ""){
+    const config = {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }
+    const body = {
+      answer: answer,
+      questionId: post?._id
+    }
+    await axios.post('/api/answers', body,config).then((res) => {
+      console.log(res.data)
+      alert('Answer added successfully')
+      window.location.href = '/'
+    }).catch((e) => {
+      console.log(e)
+    })
+  }
+}  
   return (
     <div className='post'>
       <div className='post__info'>
+        <Avatar />
+             
+        <h4>User Name</h4>
+      
 
-        {/* <Avatar /> */}
-              {/* now we add img from pc  */}
-      {/* now we add img from pc  */}
-        <img style={{ borderRadius:'50%', width:'47px', height:'47px' }} src={img2} alt='pic' />
-        {/* mai khud usert add kita ee  */}
-        <h4>Muhammad Zohaib</h4>
-        <small>12:20</small>
+
+
+       <small><LastSeen date={post?.createdAt}/></small>
       </div>
           <div className="post__body">
           <div className='post__question'>
               <p>
-                  This is test question
+                  {post?.questionName}
               </p>
+              {/* <button
+onClick={() => {
+setIsModalOpen(true)
+console.log(post?._id);
+}}
+className="post__btnAnswer"
+>
+Answer
+</button>  */}
+
               {/* //////////////// answer/////////// */}
 <Modal
 open={isModalOpen}
@@ -44,13 +92,13 @@ height: "auto",
 }}
 >
 <div className='modal__question'>
-  <h1>this is test question.</h1>
+  <h1>{post?.questionName}</h1>
   <p>asked by {" "}<span className='name'>Username </span>
-on <span className='name'> timestamp </span> </p></div>  
+on <span className='name'> {new Date(post?.createdAt).toLocaleString()}</span> </p></div>  
       <div className='modal__answer'>
-        <ReactQuill placeholder="enter your answer"/>
+        <ReactQuill value = {answer} onChange ={handleQuill} placeholder="enter your answer"/>
       </div>
-      <div className='modal__button'><button type='submit' className = 'add' >
+      <div className='modal__button'><button onClick = {handleSubmit} type='submit' className = 'add' >
 Add Answer
 </button>
 <button className = 'cancle' onClick = {() => setIsModalOpen (false) } >
@@ -59,6 +107,9 @@ Cancel
 </div>
 </Modal>
       </div>
+      
+        {post.questionUrl !== "" && <img src={post.questionUrl} alt="url" />}
+
       </div>
       <div className="post__footer">
         <div className="post__footerAction">
@@ -81,7 +132,7 @@ Cancel
           margin:"10px 0",
         }}
         >
-        1 Answer
+        {post?.allAnswers.length} Answer(s)
         </p>
 <div 
 style={{
@@ -91,7 +142,10 @@ style={{
 }}
 className="post_answer">
 
-<div 
+
+{
+  post?.allAnswers?.map((_a) => (<>
+    <div 
 style={{
   display:"flex",
   flexDirection:"column",
@@ -100,7 +154,7 @@ style={{
   borderTop:"1px solid lightgray",
 }}
 className="post-answer-container">
-<div
+    <div
 style={{
   display:"flex",
   alignItems:"center",
@@ -117,11 +171,14 @@ style={{
 }}
  className="post__info">
 <p>Username</p>
-<span>Timestamp</span>
+<span><LastSeen date = {_a?.createdAt} /></span>
 </div>
 </div>
-<div className='post__answer'>This is test answer</div>
-    </div>
+<div className='post__answer'>{ReactHtmlParser(_a?.answer)}</div>
+</div>
+  </> ))
+}
+
     </div>
     </div>
     

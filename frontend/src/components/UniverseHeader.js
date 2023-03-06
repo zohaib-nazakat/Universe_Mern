@@ -17,11 +17,36 @@ import { Avatar, Button, Input } from '@material-ui/core';
 import "./css/UniverseHeader.css";
 import Modal from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
+import axios from 'axios';
 
 function UniverseHeader() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [inputUrl, setInputUrl] = useState("")
+  const [question, setQuestion] = useState("")
 const Close = <CloseRounded />;
+
+const handleSubmit = async ()=> {
+if (question !==""){
+  const config = {
+    headers : {
+      "Content-Type": " application/json"
+    }
+  }
+  const body = {
+    questionName : question,
+    questionUrl : inputUrl
+  }
+  await axios.post('/api/questions' , body, config).then((res)=> {
+    console.log(res.data);
+    alert(res.data.message);
+    window.location.href = '/';
+
+  }).catch((e) => {
+    console.log(e)
+    alert('Error adding question')
+  })
+}
+}
   return (
   <div className='qheader'>
     <div className='qHeader-content'>
@@ -77,7 +102,10 @@ height: "auto",
 </div>
 </div>
      <div className="modal__Field">
-<Input type="text" placeholder="Start your question with 'What', 'How', 'Why', etc. " />
+<Input
+value = {question}
+onChange = {(e) => setQuestion(e.target.value)}
+ type="text" placeholder="Start your question with 'What', 'How', 'Why', etc. " />
 <div style={{
 display: "flex",
 flexDirection: "column",
@@ -106,7 +134,7 @@ alt="displayimage"
 </div>
 </div>
 <div className='modal__button'>
-<button type='submit' className = 'add' >
+<button onClick={handleSubmit} type='submit' className = 'add' >
 Add Question
 </button>
 <button className = 'modal__buttons' onClick = {() => setIsModalOpen (false) } >
