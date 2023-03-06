@@ -8,7 +8,7 @@ function BasicExample() {
   return (
    
     <Dropdown>
-      <Dropdown.Toggle variant="Transparent" id="dropdown-basic">
+      <Dropdown.Toggle variant="Transparent" id="dropdown-basic" className='dropdown'>
           <AccountBalance/>
       </Dropdown.Toggle>
 

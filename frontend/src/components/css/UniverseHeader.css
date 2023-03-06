@@ -1,3 +1,6 @@
+.react-responsive-modal-container {
+  width: 100%;
+}
 
 
 
@@ -28,9 +31,10 @@
   .qHeader-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     background-color: #009696;
     color:white;
+    height: 50px;
   }
   
   .qHeader__logo > img {
@@ -41,8 +45,11 @@
   .qHeader__icons {
     display: flex;
     color: white;
+    margin-right: 215px;
   }
-
+.qHeader__icons h3{
+  padding-left: 70px;
+}
   
   .qHeader__icon {
     padding: 5px;
@@ -106,7 +113,7 @@
   }
 
   input.MuiInputBase-input.MuiInput-input {
-    color: white;
+    color: black;
     border: none;
 }
 
@@ -184,7 +191,7 @@
   }
   
   .modal__title > h5:hover {
-    color: #b92b27;
+    color: #009696;
   }
   
   .modal__info {
@@ -285,7 +292,8 @@
     padding: 10px;
     border-radius: 33px;
     cursor: pointer;
-    width: 50%;
+    width: 22%;
+    margin-left: 5px;
   }
 .add {
        border: none;
@@ -298,7 +306,7 @@
        padding: 10px;
        border-radius: 33px;
        cursor: pointer;
-       width: 50%;
+       width: 22%;
        display: block;
 }
   .modal__buttons{

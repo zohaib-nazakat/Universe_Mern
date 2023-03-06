@@ -1,0 +1,92 @@
+/* --------------------------------- Footer  Section starts  
+                        -------------------------------------------------------*/
+                        .container{
+                            margin-bottom: 50px;
+                          }
+  
+                          footer {
+                              padding: 5px 0;
+                              background-color: #009696;
+                              color: #fff;
+                            }
+                            
+                            footer h2 {
+                              color: #fff;
+                              font-size: 1.7rem;
+                            }
+                            .main-hero-para{
+                              font-size: 1.7rem;
+                            }
+                            
+                            footer li {
+                              list-style: none;
+                              font-size: 20px;
+                              color: #fff;
+                              cursor: pointer;
+                              margin: 1rem 0;
+                            }
+                            
+                            footer li:hover {
+                              color: var(--primary-color);
+                            }
+                            footer li a{
+                              color: white;
+                              text-decoration: none;
+                            }
+                            
+                            footer .fontawesome-style {
+                              font-size: 1.7rem;
+                              color: var(--primary-color);
+                              background-color: transparent;
+                              height: 0rem;
+                              margin: 2rem 0;
+                              cursor: pointer;
+                              color: white;
+                            }
+                            .footer_fontawesome{
+                              color: white;
+                              font-size: 10px;
+                              padding-right: 5px;
+                            }
+                            
+                            footer .fontawesome-style:hover {
+                              transition: all 1s;
+                              animation: rotatefont 1s linear infinite alternate-reverse;
+                              color: #fff;
+                            }
+                            .footer_para{
+                              font-size: 15px;
+                            }
+                            .footer_email a{
+                              font-size: 15px;
+                              color: white;
+                            }
+                            
+                            @keyframes rotatefont {
+                              0% {
+                                transform: scale(0.6);
+                              }
+                              100% {
+                                transform: scale(1.2);
+                              }
+                            }
+                            
+                            footer .main-hero-para {
+                              margin: 0;
+                              font-size: 20px;
+                            }
+                            .style{
+                              margin-left: 60px;
+                            }
+                            .style li a{
+                              font-size: 16px;
+                              font-weight:normal;
+                              margin-left: 50px;
+                            }
+                            .style li a:hover{
+                              color: whitesmoke;
+                              font-size: 20px;
+                            }
+                            .style h2{
+                              font-size: 20px;
+                            }

@@ -6,13 +6,18 @@
     margin-top: 10px;
     border: 1px solid lightgray;
     border-radius: 5px;
-    max-width: 700px;
+    max-width: 800px;
     box-shadow: 0px 5px 8px -9px solid rgab(0, 0, 0, 0.5);
   }
   .post{
     margin-left: 230px;
   }
-  
+  time{
+    padding: 14px;
+  }
+  p{
+    margin-bottom: 0px;
+  }
   .post__info {
     display: flex;
     align-items: center;
@@ -29,6 +34,7 @@
   
   .post__info > small {
     margin-left: 10px;
+    margin-top: -8px;
   }
   
   .post__body {
@@ -57,7 +63,7 @@
     font-weight: 300;
     font-size: 14px;
     border-radius: 5px;
-    margin-left: 10px;
+    margin-left: 440px;
     padding-top: 15px;
     display: flex;
   }
@@ -174,7 +180,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-top: 50px;
     width: 100%;
   }
@@ -188,6 +194,8 @@
     padding: 10px;
     border-radius: 33px;
     cursor: pointer;
+    width:110px;
+    margin-left: 5px;
   }
   
   .modal__button > .cancle:hover {
@@ -197,17 +205,17 @@
     border: none;
     outline: none;
     margin-top: 5px;
-    background-color: #222;
+    background-color: grey;
     color: white;
     font-weight: 700;
     padding: 10px;
     border-radius: 33px;
     cursor: pointer;
-    width: 50%;
+    width: 22%;
   }
   .modal__button > .add:hover {
-    background-color: #eee;
-    color: #222;
+    background-color: #009696;
+    color: white;
   }
   
   .react-responsive-modal-modal {

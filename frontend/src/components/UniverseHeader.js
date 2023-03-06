@@ -7,7 +7,6 @@ import Zohaib from './Zohaib.js';
 import {
   CloseRounded,
   EmojiEvents,
-  PeopleAltOutlined,
   QuestionAnswerOutlined,
   School,
 
@@ -117,17 +116,16 @@ height: "auto",
      >
       <div className='modal__title'> 
       <h5>Add Question</h5>
-<h5>Share Link</h5>
 </div>
 <div className="modal__info">
 <Avatar src = {user?.photo} className="avatar" />
-<div className="modal__scope">
+{/* <div className="modal__scope">
 <PeopleAltOutlined />
 <select>
   <option selected>Public</option>
   <option>Private</option>
 </select>
-</div>
+</div> */}
 </div>
      <div className="modal__Field">
 <Input
@@ -143,10 +141,10 @@ color:'black'
 value={inputUrl}
 onChange={(e) => setInputUrl(e.target.value)}
 style={{
-  margin: "5px 0",
+  margin: "10px 0",
   border: "1px solid lightgray",
   padding: "10px",
-  outline: "2px solid #000",
+  // outline: "2px solid #000",
 }}
 placeholder="Optional: inclue a link that gives context" />
 {inputUrl !== "" && (

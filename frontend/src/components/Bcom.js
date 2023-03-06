@@ -6,7 +6,7 @@ import img2 from "../images/Bba/SirKamran.png";
 import img3 from "../images/Bba/SirMubashir.jpeg";
 import img4 from "../images/Bba/Sohail.jpeg";
 
-// import Footer from "./Footer";
+import Footer from "./Footer";
 
 
 
@@ -226,7 +226,7 @@ const Bcom = () => {
           </div>
         </div>
       </div>
-      {/* <Footer/> */}
+      <Footer/>
     </>
   );
 };

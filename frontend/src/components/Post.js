@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './css/Post.css';
 import { Avatar } from '@material-ui/core';
 import CloseRounded from '@material-ui/icons/CloseRounded';
-import {  Comment, ThumbDownAlt, ThumbUpAlt } from '@material-ui/icons';
+import {  Comment,  } from '@material-ui/icons';
 import Modal from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 import ReactQuill from 'react-quill';
@@ -12,6 +12,7 @@ import axios from 'axios';
 import ReactHtmlParser from 'html-react-parser'
 import { useSelector } from 'react-redux';
 import { selectUser } from '../feature/userSlice';
+import LikeDislikeButtons from './LikeButton';
 
 function LastSeen({ date }) {
   return (
@@ -114,8 +115,9 @@ Cancel
       </div>
       <div className="post__footer">
         <div className="post__footerAction">
-          <ThumbUpAlt />
-          <ThumbDownAlt />
+          {/* <ThumbUpAlt />
+          <ThumbDownAlt /> */}
+          <LikeDislikeButtons/>
           <div className='post__question'>
           <button onClick={() => setIsModalOpen (true)}
           className="post__btnAnswer">

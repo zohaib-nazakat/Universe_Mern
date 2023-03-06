@@ -6,7 +6,7 @@ import img2 from "../images/Bba/tabassum.jpeg";
 import img3 from "../images/Bba/SirMubashir.jpeg";
 import img4 from "../images/Bba/RizwanAbbas.jpg";
 
-// import Footer from "./Footer";
+import Footer from "./Footer";
 const Bba = () => {
   return (
     <>
@@ -236,7 +236,7 @@ const Bba = () => {
           </div>
         </div>
       </div>
-      {/* <Footer/> */}
+      <Footer/> 
     </>
   );
 };

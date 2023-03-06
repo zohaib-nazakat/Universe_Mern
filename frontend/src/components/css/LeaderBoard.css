@@ -2,22 +2,32 @@ body{
     font-family: sans-serif;
     margin: 0;
     overflow-x: hidden;
+    
+}
+.leaderboard_h1{
+    display: flex;
+    padding-right: 10px;
+    
 }
 
 .leaderboard{
     /* background-color: rgb(139, 196, 243); */
     /* background-color: #101; */
-    background-color: white;
     /* max-width: 55em; */
     margin-right: auto;
     margin-left: auto;
     display: block;
     padding: 1em;
     padding-top: 2em;
-}
+    /* background: url("./background.jpg");
+    background-repeat: no-repeat;
+    width: 100%; */
+    background: linear-gradient(360deg, rgba(218,216,255,1) 0%, rgba(164,252,237,1) 38%, rgba(220,242,246,1) 92%);}
 .icon{
     color: #009696;
     font-size: larger;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 .theme-img{
     width: 20em;
@@ -28,9 +38,8 @@ body{
     text-align: center;
     margin: 1em;
     /* color: white; */
-    color: black;
-    /* transform: translateY(-5em); */
-
+    color: #009696;
+    font-size: 20px;
     /* ```````Extra addup```` */
         margin-left: 40%;
         margin-top: 50px;
@@ -70,9 +79,11 @@ table td{
     padding: .5em;
     text-align: center;
     padding-top: 25px;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 tbody tr{
-    /* box-shadow: 0 2px rgba(100,100,100,.5); */
+    box-shadow: 0 2px rgba(100,100,100,.5);
     border-bottom: 2px solid #009696;
     /* border-radius: 10px; */
 }
@@ -85,17 +96,18 @@ tbody tr td:nth-child(2) p{
     transform: translateY(.5em);
     padding-left: .5em;
     text-align: left;
+    padding-bottom: 20px;
 }
 table td:nth-child(2){
     max-width: 5em;
 }
 
-tbody tr:nth-child(even){
-    /* background-color: #101; */
-    background-color: white;
-    /* border-top: 1px solid grey; */
-    /* border-radius: 10px; */
-}
+/* tbody tr:nth-child(even){
+    background-color: #101; 
+    border-top: 1px solid grey;
+     border-radius: 10px;
+    
+} */
 #winner{
     color: gold;
     font-weight: 800;

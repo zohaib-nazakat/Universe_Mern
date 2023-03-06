@@ -7,3 +7,12 @@
 .drop{
     text-decoration: none;
 }
+.dropdown{
+    font-size: 15px;
+}
+.dropdown:hover{
+    background-color: whitesmoke;
+}
+.dropdown:visited{
+    border: 5px solid red;
+}

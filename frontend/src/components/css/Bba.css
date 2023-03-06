@@ -28,27 +28,30 @@
     /* margin-bottom: 30px; */
     font-family: 'Raleway',sans-serif;
 }
-span{
+/* span{
     color: rgb(62, 62, 233);
-}
+} */
 .carousel-caption p{
     font-size: 18px;
     font-family: 'Raleway',sans-serif;
     
 }
 .slider-btn .btn{
-    background-color: blue;
+    background-color: #009696;
     margin-right: 20px;
     margin-top: 20px;
     font-family: 'Raleway',sans-serif;
+    border: none;
+    outline: none;
 
 }
 .slider-btn .btn:hover{
     border-color: yellowgreen;
-    padding: 10px 50px 10px 50px;
+    padding: 10px;
     font-size: large;
     font-weight: 500;
     font-family: 'Raleway',sans-serif;
+    border-radius: 50px;
 
 }
 .slider-btn .btn a{

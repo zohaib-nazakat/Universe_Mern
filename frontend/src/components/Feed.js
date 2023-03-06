@@ -3,6 +3,7 @@ import UniverseBox from './UniverseBox'
 import './css/Feed.css'
 import Post from './Post'
 import axios from 'axios'
+import Footer from './Footer'
 
 
 function Feed() {
@@ -27,7 +28,7 @@ console.log(e);
  <Post key={index} post={post} />
 ))}
     
-     
+     <Footer/>
       {/* <Post />
       <Post />
       <Post /> */}

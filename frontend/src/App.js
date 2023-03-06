@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
 import Login from './components/auth/Login';
-import Universe from './components/Universe';
 import { selectUser, login } from './feature/userSlice';
 import { auth } from './firebase';
 import {onAuthStateChanged} from 'firebase/auth';
@@ -15,6 +14,7 @@ import Bscs from './components/Bscs.js'
 import Bba from './components/Bba.js'
 import Bcom from './components/Bcom.js'
 import Law from './components/Law.js'
+import AboutUs from './components/AboutUs.js';
 
 
 function App() {
@@ -42,8 +42,8 @@ function App() {
       {/* ````````````` Enable it ``````` */}
 
       <BrowserRouter>
-      {user ? <Universe /> : <Login />}
-          <UniverseHeader/>
+      {user ? <UniverseHeader /> : <Login />}
+          {/* <UniverseHeader/> */}
         <Routes>
           <Route exact path='/' element={<Feed/>}></Route>  
           <Route path='/NoticeBoard' element={<NoticeBoard/>}></Route> 
@@ -52,6 +52,7 @@ function App() {
           <Route path='/Bba' element={<Bba/>}></Route> 
           <Route path='/Bcom' element={<Bcom/>}></Route> 
           <Route path='/Law' element={<Law/>}></Route> 
+          <Route path='/AboutUs' element={<AboutUs/>}></Route> 
         </Routes>
         </BrowserRouter>
     

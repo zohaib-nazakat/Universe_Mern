@@ -5,7 +5,7 @@ import img1 from "../images/Bscs/MadamNadia.jpg";
 import img2 from "../images/Bscs/SirKamran.png";
 import img3 from "../images/Bscs/SirMubashir.jpeg";
 import img4 from "../images/Bscs/RizwanAbbas.jpg";
-// import Footer from './Footer';
+import Footer from './Footer';
 const Bscs = () => {
   return (
     <>
@@ -237,7 +237,7 @@ const Bscs = () => {
         </div>
       </div>
       {/* ```````````````````````````````````````````````````` */}
-      {/* <Footer/> */}
+      <Footer/>
     </>
   );
 };
