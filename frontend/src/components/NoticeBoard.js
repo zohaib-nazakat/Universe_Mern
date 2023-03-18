@@ -12,7 +12,7 @@ const NoticeBoard = () => {
         <div className="row">
           <div className="col-1"></div>
           <div className="col-10">
-            <h3 className="mb-3">Examination</h3>
+            <h3 className="mb-3" style={{ paddingTop:'50px'}}>Examination</h3>
             <div className="bg-white border-gray">
               <div className="row">
                 <div className="col notice_heading">

@@ -1,12 +1,12 @@
 body{
-    font-family: sans-serif;
-    margin: 0;
-    overflow-x: hidden;
+    font-family: sans-serif !important;
+    margin: 0 !important;
+    overflow-x: hidden !important;
     
 }
 .leaderboard_h1{
-    display: flex;
-    padding-right: 10px;
+    display: flex !important;
+    padding-right: 10px !important;
     
 }
 

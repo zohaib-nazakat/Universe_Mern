@@ -4,7 +4,7 @@ import zohaib from "../images/Our Team/zohaib.jpeg";
 import ali from "../images/Our Team/ali.jpeg";
 import rafay from "../images/Our Team/rafay.jpeg";
 import musharaf from '../images/Our Team/musharaf.jpeg'
-import './css/AboutUs.css';
+// import './css/AboutUs.css';
 // import Style from '../Components/Style/About.module.css';
 import Style from './css/About.module.css';
 const AboutUs = () => {

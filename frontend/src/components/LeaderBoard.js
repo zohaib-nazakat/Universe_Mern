@@ -1,5 +1,5 @@
 import React from 'react';
-import '../components/css/LeaderBoard.css';
+import './css/LeaderBoard.module.css';
 // import loginpic from "../../src/img2.png";
 import rank1_pic from '../images/LeaderBoard/Gold.png';
 import rank2_pic from '../images/LeaderBoard/Silver.png';
@@ -10,11 +10,11 @@ import { StarBorder } from '@material-ui/icons';
 const Practice=()=>{
     return(
         <>
-        <div className="container-fluid leaderboard">
+        <div className="container-fluid leaderboard" style={{backgroundColor:'white'}}>
             <div class="leaderboard">
         {/* <img src="images/Photography.jpg" class="theme-img" alt='#'/> */}
-        <div class="description">
-            <h3  className='leaderboard_h1'><span className='icon'> <StarBorder/>  </span> <span>Leader Board</span>  <span className='icon'><StarBorder/> </span></h3>
+        <div class="description" style={{marginLeft:'500px', paddingTop:'100px'}}>
+            <h3  className='leaderboard_h1' style={{color:'#009696'}}><span className='icon'> <StarBorder/>  </span> <span>Leader Board</span>  <span className='icon'><StarBorder/> </span></h3>
             {/* <p>Date: 02/24/2022</p> */}
             {/* <input id="search" class="search" placeholder="Search" oninput="search()"/> */}
         </div>

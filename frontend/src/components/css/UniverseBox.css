@@ -1,3 +1,7 @@
+
+
+
+
 .quoraBox {
     display: flex;
     flex-direction: column;
@@ -7,7 +11,7 @@
     border-radius: 5px;
     cursor: pointer;
     max-width: 800px;
-    margin-top: 20px;
+    padding-top: 20px;
     margin-left: 230px;
     }
 

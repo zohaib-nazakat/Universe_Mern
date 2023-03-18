@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
-import Login from './components/auth/Login';
+// import Login from './components/Login';
 import { selectUser, login } from './feature/userSlice';
 import { auth } from './firebase';
 import {onAuthStateChanged} from 'firebase/auth';
@@ -15,7 +15,8 @@ import Bba from './components/Bba.js'
 import Bcom from './components/Bcom.js'
 import Law from './components/Law.js'
 import AboutUs from './components/AboutUs.js';
-
+import Registration from './components/auth/Registration';
+import Login from './components/auth/Login';
 
 function App() {
   const user = useSelector(selectUser)
@@ -43,8 +44,8 @@ function App() {
 
       <BrowserRouter>
       {user ? <UniverseHeader /> : <Login />}
-          {/* <UniverseHeader/> */}
         <Routes>
+          <Route path='/Registation' element={<Registration/>}></Route> 
           <Route exact path='/' element={<Feed/>}></Route>  
           <Route path='/NoticeBoard' element={<NoticeBoard/>}></Route> 
           <Route path='/LeaderBoard' element={<LeaderBoard/>}></Route> 
@@ -54,6 +55,7 @@ function App() {
           <Route path='/Law' element={<Law/>}></Route> 
           <Route path='/AboutUs' element={<AboutUs/>}></Route> 
         </Routes>
+      
         </BrowserRouter>
     
 

@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: silver;
+}
+.carousel{
+    height: 10%;
+}
+.item, img{
+    /* height: 600px !important;
+    width:  100% !important; */
+    height: 600px ;
+    width:  100% ;
+}
+.carousel-caption{
+    margin-bottom: 150px;
+}
+.carousel-caption h1{
+    font-size: 60px;
+    margin-bottom: 50px;
+}
+
+
+/* `````````````````````````````````````````` */
+.card img {
+    width: 34% !important;
+    height: 350px !important;
+    padding: 20px;
+    display: flex;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    /* background-color: rgb(79, 219, 133); */
+    background-color: #009696;
+    color: white;
+    border: none;
+    margin-top: 5px;
+}
+.d_info{
+    margin-top: 10px;
+    margin-left: 200px;
+    line-height: 100px;
+}
+.d_req{
+    margin-top: 10px;
+    margin-left: 280px;
+    line-height: 100px;
+}
+.p_req{
+    line-height: 27px;
+    padding-left: 50px;
+    padding-right: 53px;
+}
+
+/* `````````````````````````````` */
+.my-div {
+    animation-name: my-animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    /* Set the animation iteration count to 1 to rotate just once */
+    animation-iteration-count: 1;
+  }
+  
+  /* Add a class to trigger the animation */
+  .animate {
+    animation-play-state:running;
+  }
+  
+  @keyframes my-animation {
+    /* Set the starting position to 0 degrees */
+    0% {
+      transform: rotate(0deg);
+    }
+    /* Set the ending position to 360 degrees */
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  /* ````````````````````````````````````````````````````````````/ */
+  /* ````````````````````````````````````````````````````````````/ */
+  
+  .team .member .margin_set{
+    margin-left: -10px;
+  }
+  #collapseExample1 .li{
+    margin-right: 100px;
+  }
+  
+  button.btn.btn_clr.research_btn {
+    margin-left: 0px;
+}
+div#collapseExample4 {
+  margin-left: -150px;
+}
+#collapseExample0 li{
+  margin-right: 100px;
+}
+  /* ````````````````````````````````````````````````````````````/ */
+  
+  .main_btn{
+    background-color: #009696;
+    color: white;
+  }
+  .main_btn:hover{
+    background-color: #087a7a;
+    color: white;
+  }
+  .btn_clr{
+    background-color: #009696;
+    color: white;
+  }
+  .btn_clr:hover{
+    background-color: #04ffff;
+    color: grey;
+  }
+  .research_btn{
+    margin-right: 50px;
+  }
+  .research_btn1{
+    margin-right: 110px;
+  }
+  
+.team .member {
+    position: relative;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px 60px;
+    border-radius: 5px;
+    background: #fff;
+    height: 340px;
+    }
+    
+    .team .member .teampic {
+    overflow: hidden;
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+    }
+    
+    /* .team .member .teampic img {
+    transition: ease-in-out 0.3s;
+    } */
+    
+    
+    .team .member .member-info {
+    padding-left: 30px;
+    }
+    
+    .team .member h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #009696;
+    }
+    
+    .team .member span {
+    display: block;
+    font-size: 15px;
+    padding-bottom: 10px;
+    position: relative;
+    font-weight: 500;
+    }
+    
+    .team .member span::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: black;
+    bottom: 0;
+    left: 0;
+    }
+    
+    .team .member p {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+    }
+    
+    .team .member .social {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    }
+    
+    .team .member .social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #eff2f8;
+    }
+    
+    .team .member .social a i {
+    color: tomato;
+    font-size: 16px;
+    margin: 0 2px;
+    }
+    
+    .team .member .social a:hover {
+    background: tomato;
+    }
+    
+    .team .member .social a:hover i {
+    color: #fff;
+    }
+    
+    .team .member .social a+a {
+    margin-left: 8px;
+    }
+    
+    section {
+    padding: 60px 0;
+    overflow: hidden;
+    background-color: white;
+    }
+    
+    
+    
+    .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+    }
+    
+    .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #009696;
+    }
+    
+    .underline{
+        width: 150px;
+        height: 1px;
+        background-color: #009696;
+        margin: auto;
+        margin-top: -30px;
+    }
+    /* .section-title h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+    }
+    
+    .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #47b2e4;
+    bottom: 0;
+    left: calc(50% - 20px);
+    } */
+    
+    .section-title p {
+    margin-top: 20px;
+    }
+    .img-fluid{
+        height: 180px !important;
+    }
+    

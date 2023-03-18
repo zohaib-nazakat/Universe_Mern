@@ -4,7 +4,7 @@
 }
 
 .noticeboard_hero {
-    margin-top: 3%;
+    padding-top: 3%;
 }
 
 .notice_heading {
@@ -17,11 +17,7 @@
     cursor: pointer;
 }
 
-h1 {
-    padding: 40px;
-    text-align: center;
-    font-size: 1.5em;
-}
+
 
 .slide li a{
     text-decoration: none;

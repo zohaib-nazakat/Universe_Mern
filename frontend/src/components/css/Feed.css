@@ -1,4 +1,6 @@
 .feed {
     flex-direction: column;
     width: 100%;
+    padding-top: 20px;
+    background-image: linear-gradient(#44dbd4, #72d8ec);
 }

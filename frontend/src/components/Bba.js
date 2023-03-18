@@ -1,26 +1,35 @@
-import React from "react";
-import "./css/Bba.css";
-import img from "../images/Bba/CsDepartment.png";
-import img1 from "../images/Bba/sana-ullah.jpg";
-import img2 from "../images/Bba/tabassum.jpeg";
-import img3 from "../images/Bba/SirMubashir.jpeg";
-import img4 from "../images/Bba/RizwanAbbas.jpg";
+import "./css/Pages.css";
+import image from "../images/pujc1.png";
+import sanaullah from "../images/sana-ullah.jpg";
+import tabasum from '../images/tabassum.jpeg'
+import haroon from '../images/haroon.jpg';
+import rana from '../images/rana.jpeg';
+import React, { useRef, useEffect, useState } from "react";
 
-import Footer from "./Footer";
-const Bba = () => {
+function UniverseDapartment() {
+  const divRef = useRef(null);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      setShouldAnimate(true);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
-      <div
-        id="carouselExampleCaptions"
-        class="carousel slide"
-        data-bs-ride="false"
-      >
-        <div class="carousel-indicators">
+      <div id="carouselExampleCaptions" className="carousel slide">
+        <div className="carousel-indicators">
           <button
             type="button"
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide-to="0"
-            class="active"
+            className="active"
             aria-current="true"
             aria-label="Slide 1"
           ></button>
@@ -37,208 +46,253 @@ const Bba = () => {
             aria-label="Slide 3"
           ></button>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src={img} class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>
-                Business <span>Administration</span>
-              </h5>
-              <p>
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img src={image} className="d-block w-100 opacity-75" alt="..." />
+            <div className="carousel-caption d-none d-md-block">
+              <h1 className="opacity-100">Business Administration</h1>
+              <p className="opacity-100 fw-bold fs-5">
                 The Department of Information Technology at PUJC has been
                 established with the aim of providing state-of-the-art computer
                 facilities to the students. Maintaining strong links with the
                 industry....
               </p>
-
-              <div className="slider-btn">
-              <a href="#it">
-                <button className="btn btn-1" id="btn-clr">
-                  
-                  Read More
-                </button></a>
-
-                <a href="#faculty"><button className="btn btn-2" id="btn-clr">
-                  
-                  Faculty
-                </button></a>
-              </div>
+              <a href='#it'>
+              <button type="button" className="btn main_btn me-2" >
+                Read More
+              </button></a>
+              <a href="#faculty">
+              <button type="button" className="btn main_btn">
+                Faculty
+              </button></a>
             </div>
           </div>
-          <div class="carousel-item">
-            <img src={img} class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>
-                Some representative placeholder content for the second slide.
+          <div className="carousel-item">
+            <img src={image} className="d-block w-100 opacity-75" alt="..." />
+            <div className="carousel-caption d-none d-md-block">
+              <h1 className="opacity-100">Business Administration</h1>
+              <p className="opacity-100 fw-bold fs-5">
+                The Department of Information Technology at PUJC has been
+                established with the aim of providing state-of-the-art computer
+                facilities to the students. Maintaining strong links with the
+                industry....
               </p>
+              <a href='#it'>
+              <button type="button" className="btn main_btn me-2" >
+                Read More
+              </button></a>
+              <a href="#faculty">
+              <button type="button" className="btn main_btn">
+                Faculty
+              </button></a>
             </div>
           </div>
-          <div class="carousel-item">
-            <img src={img} class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>
-                Some representative placeholder content for the third slide.
+          <div className="carousel-item">
+            <img src={image} className="d-block w-100 opacity-75" alt="..." />
+            <div className="carousel-caption d-none d-md-block">
+              <h1 className="opacity-100">Business Administration</h1>
+              <p className="opacity-100 fw-bold fs-5">
+                The Department of Information Technology at PUJC has been
+                established with the aim of providing state-of-the-art computer
+                facilities to the students. Maintaining strong links with the
+                industry....
               </p>
+              <a href='#it'>
+              <button type="button" className="btn main_btn me-2" >
+                Read More
+              </button></a>
+              <a href="#faculty">
+              <button type="button" className="btn main_btn">
+                Faculty
+              </button></a>
             </div>
           </div>
         </div>
-        {/* <button
-          class="carousel-control-prev"
+        <button
+          className="carousel-control-prev"
           type="button"
           data-bs-target="#carouselExampleCaptions"
           data-bs-slide="prev"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Previous</span>
         </button>
         <button
-          class="carousel-control-next"
+          className="carousel-control-next"
           type="button"
           data-bs-target="#carouselExampleCaptions"
           data-bs-slide="next"
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button> */}
-      </div>
-      {/* ````````````````````Section`````````````````````````` */}
-
-      <div className="container">
-        <h3 className="read" id="it">
-        BUSINESS ADMINISTRATION
-        </h3>
-        <p className="read_para">
-          The Department of Information Technology at PUJC has been established
-          with the aim of providing state-of-the-art computer facilities to the
-          students. Maintaining strong links with the industry, the Faculty has
-          designed such programmes that meet the ever-changing demands of
-          workplace and professional development. These programmes equip the
-          students with a broader and deeper understanding of the theory, design
-          and application of computers to enable them to implement their novel
-          ideas. Our students will ‘learn to learn’, so that they can readily
-          adapt themselves to the field of computing as well as their work
-          environment. In addition, they will have good oral and written
-          communication skills, as well as a clear understanding of ethical
-          issues relating to the computing profession.
-        </p>
-        <hr className="mt-5" />
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Next</span>
+        </button>
       </div>
 
-      <div className="container">
-        <h3 className="read" id="it">
-        Requirement
-        </h3>
-        <p className="read_para">
-        Students with F.A./F.Sc./A Levels or equivalent qualification with at least 50% marks and age not more than 24 years are eligible for admission. The admission merit is calculated using weightage of marks obtained in Matric and F.A./F.Sc./A Levels. In case a candidate has passed F.A./F.Sc./A Levels. or equivalent in previous years, 2% marks for each session are deducted from marks obtained out of 100. There are no age and session restrictions in case of students seeking admission to BS program run on self-supporting basis.
-        </p>
-        <hr className="mt-5" />
+      {/* ```````````````````````````````````````````````````````````````````````` */}
+      <div
+        className={`my-div card ${shouldAnimate ? "animate" : ""}`}
+        ref={divRef}
+        style={{ width: "84rem" }}
+        id="it"
+      >
+        <img src={image} className="card-img-top" alt="..." />
+        <div className="card-body">
+          <h1 className="d_info" >Department Information</h1>
+          <p className="card-text text-center" >
+          BBA-Hons. Program is divided into 8 semesters. Each semester spread over a span of 4½ months. In this period, a total 138 credit hours are required to be completed. This package will consist of 42 courses with 3 credit hours each. The research project and internship will also be offered after completion of sixth semester. Research project can be replaced with two elective courses. However internship of 6 credit hours is compulsory. Both research project and internship are equivalent to 6 credit hour each.
+          </p>
+        </div>
       </div>
-      <div className="container">
-        <h3 className="read" id="it">
-        Career
-        </h3>
-        <p className="read_para">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nihil, quasi dolor ea adipisci, eius natus obcaecati quam aperiam autem molestiae fugit delectus qui fugiat, quas repellat. Pariatur laboriosam iusto possimus. Omnis ipsam velit culpa enim? Deserunt iure eius illum veniam suscipit exercitationem nesciunt natus perferendis? Nulla quidem sint dolor saepe voluptatem quam laboriosam libero, iste aperiam a ipsa veritatis.
-        </p>
-        <hr className="mt-5" />
+      {/* `````````````````````````````````````````````````` */}
+      <div class="card" style={{ width: "84rem" }}>
+        <div class="card-body">
+          <h1 class="d_req">Requirements</h1>
+          <p class="p_req">
+            Students with F.A./F.Sc./A Levels or equivalent qualification with
+            at least 50% marks and age not more than 24 years are eligible for
+            admission. The admission merit is calculated using weightage of
+            marks obtained in Matric and F.A./F.Sc./A Levels. In case a
+            candidate has passed F.A./F.Sc./A Levels. or equivalent in previous
+            years, 2% marks for each session are deducted from marks obtained
+            out of 100. There are no age and session restrictions in case of
+            students seeking admission to BS program run on self-supporting
+            basis.
+          </p>
+        </div>
+        <img src={image} className="card-img-top" alt="..." />
       </div>
-      <div className="container">
-        <h3 className="read" id="it">
-        Structure
-        </h3>
-        <p className="read_para">
-        The program requirements can normally be completed in eight semesters over four years. The maximum duration for completion of the program is six years. However students exceeding four years will not be treated as regular students and will not be entitled to any facility normally available to regular students such as hostel accommodation, healthcare and transportation.
-        </p>
-        <hr className="mt-5" />
+      {/* `````````````````````````````````````````````````` */}
+      <div
+        class="card"
+        className={`my-div card ${shouldAnimate ? "animate" : ""}`}
+        ref={divRef}
+        style={{ width: "84rem" }}
+      >
+        <img src={image} className="card-img-top" alt="..." />
+        <div class="card-body">
+          <h1 class="d_req">Career</h1>
+          <p class="p_req">
+            Students with F.A./F.Sc./A Levels or equivalent qualification with
+            at least 50% marks and age not more than 24 years are eligible for
+            admission. The admission merit is calculated using weightage of
+            marks obtained in Matric and F.A./F.Sc./A Levels. In case a
+            candidate has passed F.A./F.Sc./A Levels. or equivalent in previous
+            years, 2% marks for each session are deducted from marks obtained
+            out of 100. There are no age and session restrictions in case of
+            students seeking admission to BS program run on self-supporting
+            basis.
+          </p>
+        </div>
       </div>
-      {/* ````````````````````Faculty`````````````````````````` */}
-      {/* <div className="container">
-        <h3 className="read" id="faculty">Faculty</h3>
-        <div className="container">
-        <div className="row">
-        <div className="col-4 img-set">
-        <img src={img1} alt="CS Department HOD" />
+      {/* `````````````````````````````````````````````````` */}
+      <div class="card" style={{ width: "84rem" }}>
+        <div class="card-body">
+          <h1 class="d_req">Structure</h1>
+          <p class="p_req">
+            The program requirements can normally be completed in eight
+            semesters over four years. The maximum duration for completion of
+            the program is six years. However students exceeding four years will
+            not be treated as regular students and will not be entitled to any
+            facility normally available to regular students such as hostel
+            accommodation, healthcare and transportation.
+          </p>
         </div>
-        <div className="col-6">
-        <h3>Nadia Mumtaz</h3>
-        </div>
-        </div>
-        </div>
-        
-    </div> */}
-      <div className="container">
-        <h3 className="read" id="faculty">
-          Faculty
-        </h3>
+        <img src={image} className="card-img-top" alt="..." />
+      </div>
 
-        <div className="container d-flex justify-content-between">
-          <div class="card" style={{ width: "18rem" }}>
-            <img src={img1} class="card-img-top" alt="..." />
-            <div class="card-body">
-              <p class="card-text">
-                <h4>Nadia Mumtaz</h4>
-                <h5>Incharge Department</h5>
-                Ph.D (Scholar) Computer Science, IQRA University
-                MS Information Security (NUST)
-                MCS, KUST
-                <br />
-                Research Interests
-                <br />
-                <a href="mailto:nadia.it@pujc.edu.pk">Email Address</a>
-              </p>
-            </div>
+      {/* `````````````````````````````````````````````````````````````````````` */}
+      {/* `````````````````````````````````````````````````````````````````````` */}
+      {/* `````````````````````````````````````````````````````````````````````` */}
+      {/* `````````````````````````````````````````````````````````````````````` */}
+      {/* `````````````````````````````````````````````````````````````````````` */}
+      <section id="team" class="team section-bg">
+        <div class="container" id="faculty">
+          <div class="section-title">
+            <h2>Faculty</h2>
+            <div class="underline"></div>
+            <p>
+            Department of Business Administration
+            </p>
           </div>
-          <div class="card" style={{ width: "18rem"}}>
-            <img src={img2} class="card-img-top" alt="..." />
-            <div class="card-body">
-              <p class="card-text">
-                <h4>Kamran Shaukat Dar</h4>
-                <h5>Lecturer</h5>
-                Ph.D Scholar(Computer Science)
-                MSCS(Gold medalist)
-                BS Computer Science (PUCIT)
-                <br />
-                Research Interests
-                <br />
-                <a href="mailto:Kamran@pujc.edu.pk">Email Address</a>
-              </p>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="member d-flex align-items-start">
+                <div class="teampic">
+                  <img src={tabasum} class="img-fluid" alt="" />
+                </div>
+                <div class="member-info">
+                  <h4>Tabassum Riaz</h4>
+                  <span>Assistant Professor & Incharge Department</span>
+
+                  <p> PhD (Scholar), CUST</p>
+                  <p>MS/M.Phil (Finance), MAJU</p>
+                  <p>B.com (Hons), PU Lahore</p>
+
+                 
+
+                  
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="card" style={{ width: "18rem" }}>
-            <img src={img3} class="card-img-top" alt="..." />
-            <div class="card-body">
-              <p class="card-text">
-                <h4>M. Mubashar Hussain</h4>
-                <h5>Lecturer</h5>
-                M. Phil Mathematics (CUST)
-                M. Sc. Mathematics (PU)
-                Research Interests
-                <br />
-                <a href="mailto:mubashar@pujc.edu.pk">Email Address</a>
-              </p>
+
+            <div class="col-lg-6 mt-4 mt-lg-0">
+              <div class="member d-flex align-items-start">
+                <div class="teampic">
+                  <img src={sanaullah} class="img-fluid" alt="" />
+                </div>
+                <div class="member-info">
+                  <h4>Hafiz Muhammad Sana Ullah</h4>
+                  <span>Lecturer</span>
+                  <p> PhD (Scholar) Islamic Studies, UOL</p>
+                  <p> M.Phil Islamic Studies</p>
+                  <p> M.A Islamic Studies, PU</p>
+                  
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="card" style={{ width: "18rem" }}>
-            <img src={img4} class="card-img-top" alt="..." />
-            <div class="card-body">
-              <p class="card-text">
-                <h4>M. Mubashar Hussain</h4>
-                <h5>Lecturer</h5>
-                M. Phil Mathematics (CUST)
-                M. Sc. Mathematics (PU)
-                Research Interests
-                <br />
-                <a href="mailto:mubashar@pujc.edu.pk">Email Address</a>
-              </p>
+
+            <div class="col-lg-6 mt-4">
+              <div class="member d-flex align-items-start">
+                <div class="teampic">
+                  <img src={rana} class="img-fluid" alt="" />
+                </div>
+                <div class="member-info">
+                  <h4>Rana Muhammad Nadim</h4>
+                  <span>Lecturer</span>
+                  <p>PhD Scholar (HRM) CUST</p>
+                  <p>MPhil Business Administration NUML</p>
+                  <p>M. Com, PU</p>
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mt-4">
+              <div class="member d-flex align-items-start">
+                <div class="teampic">
+                  <img src={haroon} className="img-fluid" alt="" />
+                </div>
+                <div class="member-info">
+                  <h4>Haroon Iqbal</h4>
+                  <span>Visit Lecturer</span>
+                  <p>Msc Finance and investment , Brunel University</p>
+                  <p>Bachelors of Business Administration</p>
+                  
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <Footer/> 
+      </section>
     </>
   );
-};
+}
 
-export default Bba;
+export default UniverseDapartment;

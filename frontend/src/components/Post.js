@@ -114,7 +114,7 @@ Cancel
 
       </div>
       <div className="post__footer">
-        <div className="post__footerAction">
+        <div className="post__footerAction" style={{marginLeft:'45px'}}>
           {/* <ThumbUpAlt />
           <ThumbDownAlt /> */}
           <LikeDislikeButtons/>
@@ -132,16 +132,18 @@ Cancel
           color: "rgba(0,0,0,0.5)",
           fontSize: "12px",
           fontWeight:"bold",
-          margin:"10px 0",
+          margin:"10px 50px",
+          
         }}
         >
         {post?.allAnswers.length} Answer(s)
         </p>
 <div 
 style={{
-  margin:"5px 0px 0px 0px",
+  margin:"5px 0px 0px 25px",
   padding:"5px 0px 0px 20px",
   borderTop:"1px solid lightgray",
+  
 }}
 className="post_answer">
 
