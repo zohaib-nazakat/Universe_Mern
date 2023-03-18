@@ -11,7 +11,7 @@ const Practice=()=>{
     return(
         <>
         <div className="container-fluid leaderboard" style={{backgroundColor:'white'}}>
-            <div class="leaderboard">
+            <div class="leaderboard" style={{height:'900px'}}>
         {/* <img src="images/Photography.jpg" class="theme-img" alt='#'/> */}
         <div class="description" style={{marginLeft:'500px', paddingTop:'100px'}}>
             <h3  className='leaderboard_h1' style={{color:'#009696'}}><span className='icon'> <StarBorder/>  </span> <span>Leader Board</span>  <span className='icon'><StarBorder/> </span></h3>

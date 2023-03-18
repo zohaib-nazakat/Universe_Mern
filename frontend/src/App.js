@@ -36,32 +36,30 @@ function App() {
     }
     });
     }, [dispatch]);
-  return (
-    <div className="App">
-      {/* <h1>This is for testing</h1> */}
-
-      {/* ````````````` Enable it ``````` */}
-
-      <BrowserRouter>
-      {user ? <UniverseHeader /> : <Login />}
-        <Routes>
-          <Route path='/Registation' element={<Registration/>}></Route> 
-          <Route exact path='/' element={<Feed/>}></Route>  
-          <Route path='/NoticeBoard' element={<NoticeBoard/>}></Route> 
-          <Route path='/LeaderBoard' element={<LeaderBoard/>}></Route> 
-          <Route path='/Bscs' element={<Bscs/>}></Route> 
-          <Route path='/Bba' element={<Bba/>}></Route> 
-          <Route path='/Bcom' element={<Bcom/>}></Route> 
-          <Route path='/Law' element={<Law/>}></Route> 
-          <Route path='/AboutUs' element={<AboutUs/>}></Route> 
-        </Routes>
-      
+    return (
+      <div className="App">
+        <BrowserRouter>
+          {user ? (
+            <>
+              <UniverseHeader />
+              <Routes>
+                <Route path="/" element={<Feed />} />
+                <Route path="/Registration" element={<Registration />} />
+                <Route exact path="/NoticeBoard" element={<NoticeBoard />} />
+                <Route path="/LeaderBoard" element={<LeaderBoard />} />
+                <Route path="/Bscs" element={<Bscs />} />
+                <Route path="/Bba" element={<Bba />} />
+                <Route path="/Bcom" element={<Bcom />} />
+                <Route path="/Law" element={<Law />} />
+                <Route path="/AboutUs" element={<AboutUs />} />
+              </Routes>
+            </>
+          ) : (
+            <Login />
+          )}
         </BrowserRouter>
-    
-
-      
-    </div>
-  );
-}
+      </div>
+    );
+    }
 
 export default App;

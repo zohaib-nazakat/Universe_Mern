@@ -67,7 +67,7 @@ const handleSubmit = async() => {
           <div className="post__body">
           <div className='post__question'>
               <p>
-                  {post?.questionName}
+                  Q: {post?.questionName}
               </p>
               {/* <button
 onClick={() => {
@@ -146,6 +146,7 @@ style={{
   
 }}
 className="post_answer">
+  
 
 
 {

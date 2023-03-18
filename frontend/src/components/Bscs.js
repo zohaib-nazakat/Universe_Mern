@@ -1,9 +1,8 @@
 import "./css/Pages.css";
 import image from "../images/pujc1.png";
-import sanaullah from "../images/sana-ullah.jpg";
 import nadia from "../images/nadia.jpg";
 import SirMubashir from "../images/mubashir.jpeg";
-import Sirkamran from "../images/Sirkamran.png";
+import Aminah from '../images/Aminah.jpeg';
 
 import React, { useRef, useEffect, useState } from "react";
 
@@ -275,14 +274,13 @@ function UniverseDapartment() {
             <div class="col-lg-6 mt-4">
               <div class="member d-flex align-items-start">
                 <div class="teampic">
-                  <img src={""} className="img-fluid" alt="" />
+                  <img src={Aminah} className="img-fluid" alt="" />
                 </div>
                 <div class="member-info">
                   <h4>Miss Aminah Ali</h4>
                   <span>Visit Lecturer</span>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Obcaecati, ducimus.
+                  Mphil Computer science
                   </p>
                   {/* <div class="social">
                   <p>

@@ -21,6 +21,7 @@ import { auth } from '../firebase';
 import { logout, selectUser } from '../feature/userSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import Feed from './Feed.js';
 function UniverseHeader() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [inputUrl, setInputUrl] = useState("")
