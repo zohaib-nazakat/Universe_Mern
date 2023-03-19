@@ -5,6 +5,10 @@ import SirMubashir from "../images/mubashir.jpeg";
 import Aminah from '../images/Aminah.jpeg';
 
 import React, { useRef, useEffect, useState } from "react";
+import Footer from "./Footer";
+import university1 from '../images/university1.jpeg';
+import university2 from '../images/university2.jpeg';
+import university3 from '../images/university3.jpeg';
 
 function UniverseDapartment() {
   const divRef = useRef(null);
@@ -177,7 +181,7 @@ function UniverseDapartment() {
             basis.
           </p>
         </div>
-        <img src={image} className="card-img-top" alt="..." />
+        <img src={university1} className="card-img-top" alt="..." />
       </div>
       {/* `````````````````````````````````````````````````` */}
       <div
@@ -186,7 +190,7 @@ function UniverseDapartment() {
         ref={divRef}
         style={{ width: "84rem" }}
       >
-        <img src={image} className="card-img-top" alt="..." />
+        <img src={university3} className="card-img-top" alt="..." />
         <div class="card-body">
           <h1 class="d_req">Career</h1>
           <p class="p_req">
@@ -215,7 +219,7 @@ function UniverseDapartment() {
             accommodation, healthcare and transportation.
           </p>
         </div>
-        <img src={image} className="card-img-top" alt="..." />
+        <img src={university2} className="card-img-top" alt="..." />
       </div>
 
       {/* `````````````````````````````````````````````````````````````````````` */}
@@ -247,7 +251,7 @@ function UniverseDapartment() {
                   <p>Ph.D (Scholar) Computer Science, IQRA University</p>
                   <p>MS Information Security (NUST)</p>
                   <p>MCS, KUST</p>
-                  <button className="btn"><a href="mailto:someone@example.com"  style={{color:'white', backgroundColor:'#009696', textDecoration:'none',padding:'5px 15px', borderRadius:'5px'}}>Email</a></button>
+                  <button className="btn"><a href="mailto:nadia.it@pujc.edu.pk.com"  style={{color:'white', backgroundColor:'#009696', textDecoration:'none',padding:'5px 15px', borderRadius:'5px'}}>Email</a></button>
 
                  
                 </div>
@@ -264,7 +268,7 @@ function UniverseDapartment() {
                   <span>Lecturer</span>
                   <p> M. Phil Mathematics (CUST)</p>
                   <p> M. Sc. Mathematics (PU)</p>
-                  <button className="btn"><a href="mailto:someone@example.com"  style={{color:'white', backgroundColor:'#009696', textDecoration:'none',padding:'5px 15px', borderRadius:'5px'}}>Email</a></button>
+                  <button className="btn"><a href="mailto:mubashar@pujc.edu.pk.com"  style={{color:'white', backgroundColor:'#009696', textDecoration:'none',padding:'5px 15px', borderRadius:'5px'}}>Email</a></button>
                 </div>
               </div>
             </div>
@@ -282,6 +286,7 @@ function UniverseDapartment() {
                   <p>
                   Mphil Computer science
                   </p>
+                  <button className="btn"><a href="mailto:aminaali@pujc.edu.pk"  style={{color:'white', backgroundColor:'#009696', textDecoration:'none',padding:'5px 15px', borderRadius:'5px'}}>Email</a></button>
                   {/* <div class="social">
                   <p>
                     <button
@@ -309,6 +314,7 @@ function UniverseDapartment() {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }

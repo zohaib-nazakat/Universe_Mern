@@ -1,12 +1,12 @@
+
 import React from "react";
-// import "../index.css";
+import "../index.css";
 import zohaib from "../images/Our Team/zohaib.jpeg";
 import ali from "../images/Our Team/ali.jpeg";
 import rafay from "../images/Our Team/rafay.jpeg";
-import musharaf from '../images/Our Team/musharaf.jpeg'
-// import './css/AboutUs.css';
-// import Style from '../Components/Style/About.module.css';
 import Style from './css/About.module.css';
+
+
 const AboutUs = () => {
   return (
     <>
@@ -68,7 +68,7 @@ const AboutUs = () => {
           <div className="column column1">
             <div className="cards cards_img">
               <div className="img-container">
-                <img src={musharaf} alt="/" />
+                <img src={zohaib} alt="/" />
               </div>
               <h3>Musharaf</h3>
               <p className="para">BackEnd Developer</p>

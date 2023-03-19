@@ -1,10 +1,14 @@
-import "../Css/Pages.css";
+import "./css/Pages.css";
 import image from "../images/pujc1.png";
-import sanaullah from "../images/sana-ullah.jpg";
-import tabasum from '../images/tabassum.jpeg'
-import Sirkamran from "../images/Sirkamran.png";
-
 import React, { useRef, useEffect, useState } from "react";
+import Footer from "./Footer";
+import shazeena from "../images/shazeena.jpg";
+import ghafoor from "../images/ghafoor.png";
+import sohaib from "../images/Syedsohaib.jpg";
+import university1 from '../images/university1.jpeg';
+import university2 from '../images/university2.jpeg';
+import university3 from '../images/university3.jpeg';
+
 
 function UniverseDapartment() {
   const divRef = useRef(null);
@@ -132,7 +136,7 @@ function UniverseDapartment() {
         style={{ width: "84rem" }}
         id="it"
       >
-        <img src={image} className="card-img-top" alt="..." />
+        <img src={university1} className="card-img-top" alt="..." />
         <div className="card-body">
           <h1 className="d_info" >Department Information</h1>
           <p className="card-text text-center" >
@@ -156,7 +160,7 @@ function UniverseDapartment() {
             basis.
           </p>
         </div>
-        <img src={image} className="card-img-top" alt="..." />
+        <img src={university2} className="card-img-top" alt="..." />
       </div>
       {/* `````````````````````````````````````````````````` */}
       <div
@@ -186,7 +190,7 @@ function UniverseDapartment() {
             accommodation, healthcare and transportation.
           </p>
         </div>
-        <img src={image} className="card-img-top" alt="..." />
+        <img src={university3} className="card-img-top" alt="..." />
       </div>
 
       {/* `````````````````````````````````````````````````````````````````````` */}
@@ -208,73 +212,36 @@ function UniverseDapartment() {
             <div class="col-lg-6">
               <div class="member d-flex align-items-start">
                 <div class="teampic">
-                  <img src={""} class="img-fluid" alt="" />
+                  <img src={ghafoor} class="img-fluid" alt="" />
                 </div>
                 <div class="member-info">
-                  <h4>Tabassum Riaz</h4>
-                  <span>Assistant Professor & Incharge Department</span>
+                  <h4>Dr. Muhammad Mudassar Ghafoor</h4>
+                  <span>Associate Professor/Director Jhelum Campus</span>
 
-                  <p> PhD (Scholar), CUST</p>
-                  <p>MS/M.Phil (Finance), MAJU</p>
-                  <p>B.com (Hons), PU Lahore</p>
+                  <p> Ph.D (Management), University of Dundee, UK</p>
+                  <p>M.Phill (Management), NUML, Islamabad</p>
+                  <p>MBA (Marketing), University of Agriculture, Faisalabad</p>
 
                  
 
-                  <div class="social">
-                  <p>
-                    <button
-                    className="btn btn_clr research_btn1"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseExample1"
-                      aria-expanded="false"
-                      aria-controls="collapseExample"
-                    >
-                      Research Interest
-                    </button>
-                  </p>
-                  <div class="collapse" id="collapseExample1" style={{marginRight:'150px'}}>
-                      <li >UnKnown</li>
-                  </div>
-
-                  </div>
+                  <button className="btn"><a href="mailto:administrator@pujc.edu.pk"  style={{color:'white', backgroundColor:'#009696', textDecoration:'none',padding:'5px 15px', borderRadius:'5px'}}>Email</a></button>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-6 mt-4 mt-lg-0">
+            
+
+            <div class="col-lg-6 mt-4">
               <div class="member d-flex align-items-start">
                 <div class="teampic">
-                  <img src={""} class="img-fluid" alt="" />
+                  <img src={sohaib} class="img-fluid" alt="" />
                 </div>
                 <div class="member-info">
-                  <h4>Hafiz Muhammad Sana Ullah</h4>
-                  <span>Lecturer</span>
-                  <p> PhD (Scholar) Islamic Studies, UOL</p>
-                  <p> M.Phil Islamic Studies</p>
-                  <p> M.A Islamic Studies, PU</p>
-                  <div class="social">
-
-                  <p>
-                    <button
-                      className="btn btn_clr research_btn"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseExample"
-                      aria-expanded="false"
-                      aria-controls="collapseExample"
-                      style={{marginRight:'100px'}}
-                    >
-                      Research Interest
-                    </button>
-                  </p>
-                  <div class="collapse" id="collapseExample">
-                    <div style={{marginRight:'100px'}}>
-                      <li>Quran & Hadith</li>
-                      <li>Islamic History</li>
-                      
-
-                    </div>
-                  </div>
-                  </div>
+                  <h4>Dr Syed Sohaib Zubair</h4>
+                  <span>Assistant Professor (Adhoc)</span>
+                  <p>Ph.D Administrative Sciences (Management)</p>
+                  <p>M.Phil Management</p>
+                  <button className="btn"><a href="mailto:sohaib.pujc@pu.edu.pk"  style={{color:'white', backgroundColor:'#009696', textDecoration:'none',padding:'5px 15px', borderRadius:'5px'}}>Email</a></button>
                 </div>
               </div>
             </div>
@@ -282,76 +249,21 @@ function UniverseDapartment() {
             <div class="col-lg-6 mt-4">
               <div class="member d-flex align-items-start">
                 <div class="teampic">
-                  <img src={""} class="img-fluid" alt="" />
+                  <img src={shazeena} className="img-fluid" alt="" />
                 </div>
                 <div class="member-info">
-                  <h4>Rana Muhammad Nadim</h4>
-                  <span>Lecturer</span>
-                  <p>PhD Scholar (HRM) CUST</p>
-                  <p>MPhil Business Administration NUML</p>
-                  <p>M. Com, PU</p>
-                  <div class="social">
-                  <p style={{marginRight:'40px'}}>
-                    <button
-                      className="btn btn_clr research_btn"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseExample3"
-                      aria-expanded="false"
-                      aria-controls="collapseExample"
-                      
-                    >
-                      Research Interest
-                    </button>
-                  </p>
-                  <div class="collapse" id="collapseExample3">
-                    <div style={{marginRight:'40px'}}>
-                      <li>Organizational Behavior</li>
-                      <li>HRM</li>
-                      
-
-                    </div>
-                  </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 mt-4">
-              <div class="member d-flex align-items-start">
-                <div class="teampic">
-                  <img src={""} className="img-fluid" alt="" />
-                </div>
-                <div class="member-info">
-                  <h4>Usman Ahmed</h4>
-                  <span>Visit Lecturer</span>
-                  <p>MPhil - Management Sciences</p>
-                  <p>MBIT - Marketing</p>
-                  <div class="social">
-                  <p className="margin_set">
-                    <button
-                      className="btn btn_clr research_btn1 ms-2"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseExample4"
-                      aria-expanded="false"
-                      aria-controls="collapseExample"
-                    >
-                    Research Intrest
-                    </button>
-                  </p>
-                  <div class="collapse" id="collapseExample4">
-                    <div>
-                      <li>Unknown</li>
-                      
-
-                    </div>
-                  </div>
-                  </div>
+                  <h4>Shazeena</h4>
+                  <span>Lecturer/Department In-Charge</span>
+                  <p>MPA</p>
+                  <p>MHRM</p>
+                  <button className="btn"><a href="mailto:shazeena@pujc.edu.pk"  style={{color:'white', backgroundColor:'#009696', textDecoration:'none',padding:'5px 15px', borderRadius:'5px'}}>Email</a></button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }

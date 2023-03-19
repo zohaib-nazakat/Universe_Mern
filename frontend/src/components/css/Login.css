@@ -41,8 +41,8 @@
 }
 
 .sec_h1 {
-    margin-top: 100px;
-    margin-left: 100px;
+    margin-top: 10px;
+    margin-left: 140px;
     color: #009696;
 }
 
@@ -119,9 +119,9 @@
     color: #009696;
     padding-left: 40px;
 }
-.container-f.container-fluid {
+/* .container-f.container-fluid {
     margin-top: -65px;
-}
+} */
 .span{
     position: absolute;
     right: 300px;

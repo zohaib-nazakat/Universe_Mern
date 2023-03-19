@@ -5,6 +5,11 @@ import tabasum from '../images/tabassum.jpeg'
 import haroon from '../images/haroon.jpg';
 import rana from '../images/rana.jpeg';
 import React, { useRef, useEffect, useState } from "react";
+import Footer from "./Footer";
+import university1 from '../images/university1.jpeg';
+import university2 from '../images/university2.jpeg';
+import university3 from '../images/university3.jpeg';
+
 
 function UniverseDapartment() {
   const divRef = useRef(null);
@@ -141,7 +146,7 @@ function UniverseDapartment() {
         style={{ width: "84rem" }}
         id="it"
       >
-        <img src={image} className="card-img-top" alt="..." />
+        <img src={university1} className="card-img-top" alt="..." />
         <div className="card-body">
           <h1 className="d_info" >Department Information</h1>
           <p className="card-text text-center" >
@@ -165,7 +170,7 @@ function UniverseDapartment() {
             basis.
           </p>
         </div>
-        <img src={image} className="card-img-top" alt="..." />
+        <img src={university2} className="card-img-top" alt="..." />
       </div>
       {/* `````````````````````````````````````````````````` */}
       <div
@@ -174,7 +179,7 @@ function UniverseDapartment() {
         ref={divRef}
         style={{ width: "84rem" }}
       >
-        <img src={image} className="card-img-top" alt="..." />
+        <img src={university3} className="card-img-top" alt="..." />
         <div class="card-body">
           <h1 class="d_req">Career</h1>
           <p class="p_req">
@@ -234,6 +239,7 @@ function UniverseDapartment() {
                   <p> PhD (Scholar), CUST</p>
                   <p>MS/M.Phil (Finance), MAJU</p>
                   <p>B.com (Hons), PU Lahore</p>
+                  <button className="btn"><a href="mailto:tabassumriaz@pujc.edu.pk.com"  style={{color:'white', backgroundColor:'#009696', textDecoration:'none',padding:'5px 15px', borderRadius:'5px'}}>Email</a></button>
 
                  
 
@@ -253,6 +259,7 @@ function UniverseDapartment() {
                   <p> PhD (Scholar) Islamic Studies, UOL</p>
                   <p> M.Phil Islamic Studies</p>
                   <p> M.A Islamic Studies, PU</p>
+                  <button className="btn"><a href="mailto:m.sana.u@pujc.edu.pk.com"  style={{color:'white', backgroundColor:'#009696', textDecoration:'none',padding:'5px 15px', borderRadius:'5px'}}>Email</a></button>
                   
                 </div>
               </div>
@@ -269,6 +276,7 @@ function UniverseDapartment() {
                   <p>PhD Scholar (HRM) CUST</p>
                   <p>MPhil Business Administration NUML</p>
                   <p>M. Com, PU</p>
+                  <button className="btn"><a href="mailto:rananadeem@pujc.edu.pk.com"  style={{color:'white', backgroundColor:'#009696', textDecoration:'none',padding:'5px 15px', borderRadius:'5px'}}>Email</a></button>
                   
                 </div>
               </div>
@@ -284,6 +292,7 @@ function UniverseDapartment() {
                   <span>Visit Lecturer</span>
                   <p>Msc Finance and investment , Brunel University</p>
                   <p>Bachelors of Business Administration</p>
+                  <button className="btn"><a href="mailto:someone@example.com"  style={{color:'white', backgroundColor:'#009696', textDecoration:'none',padding:'5px 15px', borderRadius:'5px'}}>Email</a></button>
                   
                 </div>
               </div>
@@ -291,6 +300,7 @@ function UniverseDapartment() {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }

@@ -3,8 +3,13 @@ import image from "../images/pujc1.png";
 import faraz from '../images/faraz.jpg';
 import saimabutt from '../images/saimabutt.jpg'; 
 import yasir from '../images/yasir.jpg';
+import university1 from '../images/university1.jpeg';
+import university2 from '../images/university2.jpeg';
+import university3 from '../images/university3.jpeg';
+
 
 import React, { useRef, useEffect, useState } from "react";
+import Footer from "./Footer";
 
 function UniverseDapartment() {
   const divRef = useRef(null);
@@ -156,7 +161,7 @@ function UniverseDapartment() {
             basis.
           </p>
         </div>
-        <img src={image} className="card-img-top" alt="..." />
+        <img src={university1} className="card-img-top" alt="..." />
       </div>
       {/* `````````````````````````````````````````````````` */}
       <div
@@ -165,7 +170,7 @@ function UniverseDapartment() {
         ref={divRef}
         style={{ width: "84rem" }}
       >
-        <img src={image} className="card-img-top" alt="..." />
+        <img src={university2} className="card-img-top" alt="..." />
         <div class="card-body">
           <h1 class="d_req">Career</h1>
           <p class="p_req">
@@ -194,7 +199,7 @@ function UniverseDapartment() {
             accommodation, healthcare and transportation.
           </p>
         </div>
-        <img src={image} className="card-img-top" alt="..." />
+        <img src={university3} className="card-img-top" alt="..." />
       </div>
 
       {/* `````````````````````````````````````````````````````````````````````` */}
@@ -227,26 +232,7 @@ function UniverseDapartment() {
 
                  
 
-                  <div class="social">
-                  <p>
-                    <button
-                    className="btn btn_clr research_btn1"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseExample1"
-                      aria-expanded="false"
-                      aria-controls="collapseExample"
-                      style={{marginRight:'140px'}}
-                    >
-                      Research Interest
-                    </button>
-                  </p>
-                  <div class="collapse" id="collapseExample1" style={{marginRight:'40px'}}>
-                      <li >International Trade Law</li>
-                      <li >International Economic Law</li>
-                      <li>Contract Law</li>
-                  </div>
-
-                  </div>
+                  <button className="btn"><a href="mailto:frazashraf@pujc.edu.pk.com"  style={{color:'white', backgroundColor:'#009696', textDecoration:'none',padding:'5px 15px', borderRadius:'5px'}}>Email</a></button>
                 </div>
               </div>
             </div>
@@ -262,30 +248,7 @@ function UniverseDapartment() {
                   <p>Ph.D Scholar (IIUI)</p>
                   <p> LLM (IIUI)</p>
                   <p> LLB (PU Gujranwala Campus)</p>
-                  <div class="social">
-
-                  <p>
-                    <button
-                      className="btn btn_clr research_btn"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseExample"
-                      aria-expanded="false"
-                      aria-controls="collapseExample"
-                      style={{marginRight:'90px'}}
-                    >
-                      Research Interest
-                    </button>
-                  </p>
-                  <div class="collapse" id="collapseExample">
-                    <div style={{marginRight:'0px'}}>
-                      <li>Family Law</li>
-                      <li>Constitutional Law</li>
-                      <li>Criminal Law and Criminology</li>
-                      
-
-                    </div>
-                  </div>
-                  </div>
+                  <button className="btn"><a href="mailto:Saima.butt2010@ymail.com.com"  style={{color:'white', backgroundColor:'#009696', textDecoration:'none',padding:'5px 15px', borderRadius:'5px'}}>Email</a></button>
                 </div>
               </div>
             </div>
@@ -301,30 +264,7 @@ function UniverseDapartment() {
                   <p>Ph.D Scholar (PU)</p>
                   <p>LLM, PU Law College</p>
                   <p>LL.B, PU Law College</p>
-                  <div class="social">
-                  <p style={{marginRight:'30px'}}>
-                    <button
-                      className="btn btn_clr research_btn"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseExample3"
-                      aria-expanded="false"
-                      aria-controls="collapseExample"
-                      
-                    >
-                      Research Interest
-                    </button>
-                  </p>
-                  <div class="collapse" id="collapseExample3">
-                    <div style={{marginRight:'0px'}}>
-                        <li>Family Law</li>
-                      <li>Constitutional Law</li>
-                      <li>Criminal Law and Criminology</li>
-                      
-                      
-
-                    </div>
-                  </div>
-                  </div>
+                  <button className="btn"><a href="mailto:yasirkayani@pujc.edu.pk.com"  style={{color:'white', backgroundColor:'#009696', textDecoration:'none',padding:'5px 15px', borderRadius:'5px'}}>Email</a></button>
                 </div>
               </div>
             </div>
@@ -333,6 +273,7 @@ function UniverseDapartment() {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }

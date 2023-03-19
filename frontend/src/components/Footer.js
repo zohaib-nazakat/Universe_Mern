@@ -1,10 +1,11 @@
+import { Mail, Phone } from "@material-ui/icons";
 import React from "react";
 import {Link} from 'react-router-dom';
 import './css/Footer.css';
 const Footer = () => {
   return (
     <>
-      <footer>
+      <footer style={{marginTop:'10px'}}>
         <div>
           <div className="row pt-5">
             <div className="col-12 col-lg-10 mx-auto">
@@ -13,22 +14,23 @@ const Footer = () => {
                   {/* <h2>Company</h2> */}
                   <h2>About Us</h2>
                   <p className="footer_para">
-                    Universe is a Website base platform where Students and
-                    Teachers Can Interact with eachother
+                    Universe is a Web-base platform where Students and
+                    Teachers Can Interact with each other
                   </p>
                   <p className="footer_email">
+                    <p>For any iqurey or suggestion feel free to Mail Us</p>
                     <span className="footer_fontawesome">
-                      <i class="fa-solid fa-envelope"></i>
+                      <Mail/>
                     </span>
                     <a href="mailto:zohaibnazakat@gmail.com.com">
-                      Zohaibnazakat@gmail.com
+                      Universe@gmail.com
                     </a>
                   </p>
                   <p className="footer_email">
                     <span className="footer_fontawesome">
-                      <i class="fa-solid fa-phone"></i>
+                    {/* <Phone/> */}
                     </span>
-                    <a href="+923412802701">+923412802701</a>
+                    {/* <a href="+923412802701">+923412802701</a> */}
                   </p>
                 </div>
 
@@ -42,7 +44,7 @@ const Footer = () => {
                       <Link to="/AboutUs">About Us</Link>
                     </li>
                     <li>
-                    <a href="mailto:zohaibnazakat@gmail.com">
+                    <a href="mailto:universe@gmail.com">
                       Contact Us
                     </a>
                     </li>
@@ -110,7 +112,7 @@ const Footer = () => {
               <hr />
               <div className="mb-4">
                 <p className="main-hero-para text-center w-100">
-                  Copyright @ 2022 Universe. All rights reserved.
+                  Copyright @ 2022 UniVerse. All rights reserved.
                 </p>
               </div>
             </div>

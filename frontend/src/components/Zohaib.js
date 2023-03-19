@@ -18,6 +18,7 @@ function BasicExample() {
         <Link to='/Bba' className='drop'> <Dropdown.Item href="#/action-1">BBA</Dropdown.Item></Link>
         <Link to='/Bcom' className='drop'> <Dropdown.Item href="#/action-1">BCOM</Dropdown.Item></Link>
         <Link to='/Law' className='drop'> <Dropdown.Item href="#/action-1">LAW</Dropdown.Item></Link>
+        <Link to='/Bsm' className='drop'> <Dropdown.Item href="#/action-1">BSM</Dropdown.Item></Link>
         
       </Dropdown.Menu>
     </Dropdown>

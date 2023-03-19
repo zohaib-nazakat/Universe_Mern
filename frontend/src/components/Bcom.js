@@ -1,9 +1,13 @@
 import "./css/Pages.css";
 import image from "../images/pujc1.png";
-import sanaullah from "../images/sana-ullah.jpg";
 import sohail from '../images/sohail.jpeg';
+import Footer from "./Footer";
 
 import React, { useRef, useEffect, useState } from "react";
+import university1 from '../images/university1.jpeg';
+import university2 from '../images/university2.jpeg';
+import university3 from '../images/university3.jpeg';
+
 
 function UniverseDapartment() {
   const divRef = useRef(null);
@@ -64,7 +68,7 @@ function UniverseDapartment() {
             </div>
           </div>
           <div className="carousel-item">
-            <img src={image} className="d-block w-100 opacity-75" alt="..." />
+            <img src={university1} className="d-block w-100 opacity-75" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h1 className="opacity-100">Department of COMMERCE</h1>
               <p className="opacity-100 fw-bold fs-5">
@@ -81,7 +85,7 @@ function UniverseDapartment() {
             </div>
           </div>
           <div className="carousel-item">
-            <img src={image} className="d-block w-100 opacity-75" alt="..." />
+            <img src={university2} className="d-block w-100 opacity-75" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h1 className="opacity-100">Department of COMMERCE</h1>
               <p className="opacity-100 fw-bold fs-5">
@@ -134,7 +138,7 @@ function UniverseDapartment() {
         style={{ width: "84rem" }}
         id="it"
       >
-        <img src={image} className="card-img-top" alt="..." />
+        <img src={university3} className="card-img-top" alt="..." />
         <div className="card-body">
           <h1 className="d_info" >Department Information</h1>
           <p className="card-text text-center" >
@@ -196,7 +200,7 @@ function UniverseDapartment() {
             accommodation, healthcare and transportation.
           </p>
         </div>
-        <img src={image} className="card-img-top" alt="..." />
+        <img src={university1} className="card-img-top" alt="..." />
       </div>
 
       {/* `````````````````````````````````````````````````````````````````````` */}
@@ -226,6 +230,7 @@ function UniverseDapartment() {
 
                   <p> M.Phil (Commerce) Hailey college of commerce, PU</p>
                   <p>B.Com (Hons.) Hailey college of commerce, PU</p>
+                  <button className="btn"><a href="mailto:tooba.arshad@pujc.edu.pk.com"  style={{color:'white', backgroundColor:'#009696', textDecoration:'none',padding:'5px 15px', borderRadius:'5px'}}>Email</a></button>
 
                  
 
@@ -245,6 +250,7 @@ function UniverseDapartment() {
                   <p> PhD (Commerce- Management) HCC</p>
                   <p> MCom Hons PU</p>
                   <p> BCom Hons PU</p>
+                   <button className="btn"><a href="mailto:sohail.younus@pujc.edu.pk.com"  style={{color:'white', backgroundColor:'#009696', textDecoration:'none',padding:'5px 15px', borderRadius:'5px'}}>Email</a></button>
                  
                 </div>
               </div>
@@ -256,6 +262,7 @@ function UniverseDapartment() {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }
